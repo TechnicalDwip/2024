@@ -1,6 +1,5 @@
 class script(object):
-    START_TXT = """<b>Hᴇʟʟᴏ {},Nanbha and Nanbis❤️ Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, Iam Advanced and Powerfull movie provide bot [AWESOME File Store bot] Just Add To me in your own group With Admin permission I can provide movies in your 
-Movie Group😍</b>"""
+    START_TXT = """<b>Hey, {}! 😃\n\nMy Name is <a href=https://t.me/{}>{}</a> , I 𝖼𝖺𝗇 𝗌𝖾𝖺𝗋𝖼𝗁 𝗆𝗈𝗏𝗂𝖾, 𝗌𝖾𝗋𝗂𝖾𝗌 𝖿𝗈𝗋 𝗒𝗈𝗎. 𝖩𝗎𝗌𝗍 𝗌𝖾𝗇𝖽 𝗆𝖾 𝖺𝗇𝗒 𝗆𝗈𝗏𝗂𝖾 𝗈𝗋 𝗌𝖾𝗋𝗂𝖾𝗌 𝗇𝖺𝗆𝖾 𝖻𝗎𝗍 𝗆𝖺𝗄𝖾 𝗌𝗎𝗋𝖾 𝗍𝗁𝗂𝗌 𝗌𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝗂𝗌 𝖼𝗈𝗋𝗋𝖾𝖼𝗍.\n\n𝖠𝖿𝗍𝖾𝗋 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾 𝗇𝖺𝗆𝖾 𝗐𝖺𝗂𝗍 𝖿𝖾𝗐 𝗌𝖾𝖼𝗈𝗇𝖽𝗌 𝖺𝗇𝖽 𝗌𝖾𝖾 𝗆𝗒 𝗆𝖺𝗀𝗂𝖼.\n\n   Maintenance By @Wombackup</b>"""
 
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
