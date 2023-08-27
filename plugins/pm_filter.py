@@ -2298,7 +2298,7 @@ async def global_filters(client, message, text=False):
                                                 await asyncio.sleep(600)
                                                 await joelkb.delete()
                                 except KeyError:
-                                    grpid = await active_connection(str(
+                                    grpid = await active_connection(str(message.from_user.id))
                                         await auto_filter(client, message) 
                             else:
                                 try:
