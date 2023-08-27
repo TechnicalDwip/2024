@@ -26,7 +26,7 @@ async def start(client, message):
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('☘️ Movies CH ☘️', url="https://t.me/+2xRD3nu8Y7ZkNTVl"),
-                    InlineKeyboardButton('🍁 Movies Files 🍁', url='https://t.me/RoyalFiles')
+                    InlineKeyboardButton('🍁 Movies Grup 🍁', url='https://t.me/Womrequest')
                 ],[
                     InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url='https://t.me/Wombackup')
                   ]]
@@ -45,10 +45,13 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('☘️ Movies CH ☘️', url="https://t.me/+2xRD3nu8Y7ZkNTVl"),
-                    InlineKeyboardButton('🍁 Movies Files 🍁', url='https://t.me/RoyalFiles')
+                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ ? 💸', callback_data="shortlink_info"),
+                    InlineKeyboardButton('🍁 Mᴏᴠɪᴇ Gʀᴏᴜᴘ 🍁', url='https://t.me/Womrequest')
                 ],[
-                    InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url='https://t.me/Wombackup')
+                    InlineKeyboardButton('☘️ Hᴇʟᴘ ☘️', callback_data='help'),
+                    InlineKeyboardButton('🍃 Aʙᴏᴜᴛ 🍃', callback_data='about')
+                ],[
+                    InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAIFNGJSlfOErbkSeLt9SnOniU-58UUBAAKaAAPIlGQULGXh4VzvJWoeBA") 
@@ -94,7 +97,7 @@ async def start(client, message):
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('☘️ Movies CH ☘️', url="https://t.me/+2xRD3nu8Y7ZkNTVl"),
-                    InlineKeyboardButton('🍁 Movies Files 🍁', url='https://t.me/RoyalFiles')
+                    InlineKeyboardButton('🍁 Movies Grup 🍁', url='https://t.me/Womrequest')
                 ],[
                     InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url='https://t.me/Wombackup')
                   ]]
@@ -237,7 +240,7 @@ async def start(client, message):
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             await message.reply_text(
-                text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
+                text=f"<b>Hey {message.from_user.mention},\n You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
                 protect_content=True
             )
             await verify_user(client, userid, token)
