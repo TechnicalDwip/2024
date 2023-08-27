@@ -45,16 +45,13 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ ? 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('🍃 Mᴏᴠɪᴇ Gʀᴏᴜᴘ 🍃', url='https://t.me/Womrequest')
+                    InlineKeyboardButton('☘️ Movies CH ☘️', url="https://t.me/+2xRD3nu8Y7ZkNTVl"),
+                    InlineKeyboardButton('🍁 Movies Files 🍁', url='https://t.me/RoyalFiles')
                 ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url='https://t.me/+2xRD3nu8Y7ZkNTVl')
+                    InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url='https://t.me/Wombackup')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAEJ4GtkyPgEzpIUC_DSmirN6eFWp4KInAACsQoAAoHSSFYub2D15dGHfy8E") 
+        m=await message.reply_sticker("❤") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -96,13 +93,10 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ ? 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('🍃 Mᴏᴠɪᴇ Gʀᴏᴜᴘ 🍃', url='https://t.me/Womrequest')
+                    InlineKeyboardButton('☘️ Movies CH ☘️', url="https://t.me/+2xRD3nu8Y7ZkNTVl"),
+                    InlineKeyboardButton('🍁 Movies Files 🍁', url='https://t.me/RoyalFiles')
                 ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
-                ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url='https://t.me/+2xRD3nu8Y7ZkNTVl')
+                    InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url='https://t.me/Wombackup')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
