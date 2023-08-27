@@ -1347,13 +1347,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/Womrequest')
+                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ ? 💸', callback_data="shortlink_info"),
+                    InlineKeyboardButton('🍁 Mᴏᴠɪᴇ Gʀᴏᴜᴘ 🍁', url='https://t.me/Womrequest')
                 ],[
-                    InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton('🌿 Hᴇʟᴘ 🌿', callback_data='help'),
+                    InlineKeyboardButton('☘️ Aʙᴏᴜᴛ ☘️', callback_data='about')
                 ],[
-                    InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
+                    InlineKeyboardButton('🍃 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍃', url=CHNL_LNK)
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1622,7 +1622,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/creatorrio")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/royaldwip")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2298,10 +2298,7 @@ async def global_filters(client, message, text=False):
                                                 await asyncio.sleep(600)
                                                 await joelkb.delete()
                                 except KeyError:
-                                    grpid = await active_connection(str(message.from_user.id))
-                                    await save_group_settings(grpid, 'auto_ffilter', True)
-                                    settings = await get_settings(message.chat.id)
-                                    if settings['auto_ffilter']:
+                                    grpid = await active_connection(str(
                                         await auto_filter(client, message) 
                             else:
                                 try:
