@@ -313,7 +313,7 @@ async def start(client, message):
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    text="<b><b>Sorry! \n\n• Your Temporary Token has been expired, Kindly generate a New Temp Token to start using Shinchan Bot Again...\n\nToken Validity : Today Midnight 🕛</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -376,7 +376,7 @@ async def start(client, message):
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !\n\nIf You Don't Know How To Verify Than Watch This 👉 <a href='https://t.me/tutorial_videoss/2'>Video</a> 👈</b>",
+                    text="<b>Sorry! \n\n• Your Temporary Token has been expired, Kindly generate a New Temp Token to start using Shinchan Bot Again...\n\nToken Validity : Today Midnight 🕛",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -435,7 +435,7 @@ async def start(client, message):
             InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
         ]]
         await message.reply_text(
-            text="<b>You are not verified !\nKindly verify to continue !\n\nIf You Don't Know How To Verify Than Watch This 👉 <a href='https://t.me/tutorial_videoss/2'>Video</a> 👈</b>",
+            text="<b>Sorry! \n\n• Your Temporary Token has been expired, Kindly generate a New Temp Token to start using Shinchan Bot Again...\n\nToken Validity : Today Midnight 🕛",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
