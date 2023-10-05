@@ -7,7 +7,7 @@
  requests 
  bs4 
  git+https://github.com/Joelkb/cinemagoer 
- shortzy 
+ shortzy==0.0.8 
  datetime 
  pytz 
  aiohttp
