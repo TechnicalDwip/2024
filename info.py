@@ -49,7 +49,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', True))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.in')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io/easy_api?key=4HOFBjjFxSNag0CoW64QgxwBG4k1&link=https://shareus.io')
 SHORTLINK_API = environ.get('SHORTLINK_API', '4HOFBjjFxSNag0CoW64QgxwBG4k1')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
