@@ -200,10 +200,10 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 Movie Provided By [ <a href=https://t.me/Wombackup> Wombackup 🚩 </a>]</b>""" 
 
     IMDB_TEMPLATE_TXT = """
-IMDB Data Generate For : {query} 
-Requested By : {message.from_user.mention} ❤
+<b>✅ Requested By : {message.from_user.mention} ❤
+
      <•⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯•>
-• Name</b>: <a href={url}>{title}</a>
+• Name: <a href={url}>{title}</a>
 • Genres: {genres}
 • Release Year: <a href={url}/releaseinfo>{year}</a>
 • Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
