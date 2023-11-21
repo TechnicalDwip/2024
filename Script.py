@@ -166,12 +166,15 @@ Any Doubts or Not Connecting? Contact Me @RoyalDwip 🚩</b>
 
 ɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ"""
 
-    SELECT = """
-MOVIES ➢ Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs"
-
-SERIES ➢ Sᴇʟᴇᴄᴛ "Sᴇᴀsᴏɴs"
-
-Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛᴏɴ ᴀɴᴅ Cʟɪᴄᴋ "Sᴇɴᴅ Aʟʟ" Tᴏ ɢᴇᴛ Aʟʟ Fɪʟᴇ Lɪɴᴋs ɪɴ ᴀ Sɪɴɢʟᴇ ᴄʟɪᴄᴋ"""
+    SELECT = """Click " Language " To Select Favorite Language Which You Want Or Also Select Quality 🔥
+    Note : 
+    • " Pre " Button Means Hall print Movies 
+    • " Web " Button Means Bluray, Full HD, Movies 
+    
+    Click " Series " To Select Web Series Season 🔥
+    Example : Loki Season 1 
+    
+    That Means If You Send Any Series Name Or Click On " Series " Button Or Select Any " Season Like Season 1 / S1 " Than Bot Show You All Season 1 Episodes ✅"""
 
     SINFO = """
 ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
