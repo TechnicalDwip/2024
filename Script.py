@@ -187,11 +187,15 @@ Any Doubts or Not Connecting? Contact Me @RoyalDwip 🚩</b>
 
 🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)"""
 
-    NORSLTS = """
-#Request_Content 
-𝗨𝘀𝗲𝗿 <b>: tg://openmessage?user_id={}</b>
-𝗡𝗮𝗺𝗲 <b>: {}</b>
-𝗖𝗼𝗻𝘁𝗲𝗻𝘁 : `{}`"""
+    NORSLTS = """<b>#REQUESTED_CONTENT
+    
+USER LINK : tg://openmessage?user_id={}
+
+USER NAME<b>: {}</b>
+
+CONTENT NAME :</b> `{}`
+
+~ @WomBackUp 🚩"""
 
     CAPTION = """<b>📂 Fɪʟᴇɴᴀᴍᴇ : {file_name}
 
