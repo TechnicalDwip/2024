@@ -436,7 +436,7 @@ async def start(client, message):
                 InlineKeyboardButton("How To Verify?", url="https://youtu.be/tLruG2ZNqJo?si=Y9vPy6ILQzt3xVVu")
               ]]
         await message.reply_text(
-            text="<b>Sorry! \n\n•<i> Your Temporary Token has been expired, Kindly generate a New Temp Token to start using Shinchan Bot Again...</i>\n\nToken Validity : Today Midnight 🕛</b>",
+            text="<b>•<i> Your Temporary Token has been expired, Kindly generate a New Temporary Token By Using Verify Button!</i>\n\nToken Timeout : Today Midnight 🕛</b>",
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
