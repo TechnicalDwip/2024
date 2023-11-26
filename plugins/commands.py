@@ -376,7 +376,7 @@ async def start(client, message):
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
                 await message.reply_text(
-                    text="<b>Sorry! \n\n•<i> Your Temporary Token has been expired, Kindly generate a New Temp Token to start using Shinchan Bot Again...</i>\n\nToken Validity : Today Midnight 🕛</b>",
+                    text="<b>Sorry! \n\n•<i> Your Temporary Token has been expired, Kindly generate a New Temp Token to start using Shinchan Bot Again...</i>\n\nToken Validity : Today Midnight 🕛\n⚠ If You Don't Know How To Verify Than Click On /tutorial</b>",
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
