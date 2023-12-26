@@ -432,11 +432,13 @@ async def start(client, message):
         f_caption = f"[ @WOMBACKUP ]  {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [
-    [InlineKeyboardButton(
+    [
+        InlineKeyboardButton(
         '⚠️ Verify', 
         url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")
         ],
-    [InlineKeyboardButton(
+    [
+        InlineKeyboardButton(
         'How To Verify ❓', 
         url="https://youtu.be/tLruG2ZNqJo?si=Y9vPy6ILQzt3xVVu")
     ]
