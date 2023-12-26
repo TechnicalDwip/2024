@@ -15,10 +15,10 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '13556430'))
 API_HASH = environ.get('API_HASH', '3531771c0d58b9ffc44d12f38c5edbf5')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6226398171:AAFRteJSsqB9KkNdppzKh0fgdiN1YssxKps")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6226398171:AAGKSiO4AFL0q9W0UG0TSo-Vs0EZ_qTaDEs")
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 180))
+CACHE_TIME = int(environ.get('CACHE_TIME', 120))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 PICS = (environ.get('PICS', 'https://graph.org/file/49d7345ad170aeb18dd9e.jpg https://graph.org/file/b7cc8944420ea00bd0bf8.jpg https://graph.org/file/6ef07da9bfbe3e8bf6611.jpg')).split() #SAMPLE PIC
