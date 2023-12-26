@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/Royal-Luku/Shinchan_V2_Shortner.git /Shinchan_V2_Shortner 
+  git clone https://github.com/TechnicalDwip/2024 /2024
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /Shinchan_V2_Shortner 
+  git clone $UPSTREAM_REPO /2024 
 fi
-cd /Shinchan_V2_Shortner 
+cd /2024 
 pip3 install -U -r requirements.txt
-echo "Starting Bot...."
+echo "Trying To Running By Royal's Speed 😜☠️"
 python3 bot.py
