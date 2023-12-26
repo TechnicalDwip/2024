@@ -11,6 +11,8 @@
  datetime 
  pytz 
  aiohttp
+ asyncio==3.4.3
+
 
 #---master---# 
  #Telethroid==0.0.10 
