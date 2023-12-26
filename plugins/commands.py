@@ -433,14 +433,9 @@ async def start(client, message):
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [
     [
-        InlineKeyboardButton(
-        '⚠️ Verify', 
-        url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")
-        ],
-    [
-        InlineKeyboardButton(
-        'How To Verify ❓', 
-        url="https://youtu.be/tLruG2ZNqJo?si=Y9vPy6ILQzt3xVVu")
+        InlineKeyboardButton('⚠️ Verify', url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")
+        ],[
+        InlineKeyboardButton('How To Verify ❓', url="https://youtu.be/tLruG2ZNqJo?si=Y9vPy6ILQzt3xVVu")
     ]
 ]
         await message.reply_text(
