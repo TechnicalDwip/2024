@@ -76,9 +76,11 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text=f"<b>Hey, {user} 🔥!\n\nSorry But I Am Not Support In PM \nAdd Me In your group as admin than search any movie I will provide you just a seconds!</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Add Me To Your Group", url=f"http://telegram.me/ShinchanFilterRobot?startgroup=true")]])
-    )
+         text=f"<b>Hey, {user}!\n\nI Can't Give You Movies in this Chat! You Can Add Me To Your Group as Admin Or you Can Join My Movie Request Group Also \n\n[ As Your Wish ]</b>",   
+         reply_markup = InlineKeyboardMarkup([
+    [InlineKeyboardButton("• Join My Movie Request Grp •", url="http://t.me/womrequest")],
+    [InlineKeyboardButton("• Add Me To Your Grp •", url="http://telegram.me/ShinchanFilterRobot?startgroup=true")]
+])
     await bot.send_message(
         chat_id=LOG_CHANNEL,
         text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
