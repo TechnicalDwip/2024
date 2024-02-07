@@ -398,7 +398,7 @@ async def start(client, message):
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
-            title = '[ @WOMBACKUP ]   ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            title = '**🗣 @SwiftHornCinema**   ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -408,18 +408,18 @@ async def start(client, message):
                     return
             await msg.edit_caption(f_caption)
             btn = [[
-                InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
+                InlineKeyboardButton("Recover File!", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply("<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie File/Video will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this File/Video to your Saved Messages and Start Download there</i></b>",quote=True)
+            k = await msg.reply("<b><i>𝖠𝖻𝗈𝗏𝖾 𝖿𝗂𝗅𝖾 𝗐𝗂𝗅 𝖻𝖾 𝖺𝗎𝗍𝗈 𝖽𝖾𝗅𝖾𝗍𝖾 𝗂𝗇 10 𝗆𝗂𝗇𝗎𝗍𝖾𝗌 𝗄𝗂𝗇𝖽𝗅𝗒 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖺𝗇𝖽 𝗌𝖺𝗏𝖾 𝗂𝗍...</i></b>",quote=True)
             await asyncio.sleep(600)
             await msg.delete()
-            await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
+            await k.edit_text("<b>𝖠𝖻𝗈𝗏𝖾 𝖿𝗂𝗅𝖾 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝖿 𝗒𝗈𝗎 𝖽𝗈𝗇'𝗍 𝗌𝖺𝗏𝖾 𝗂𝗍 𝗍𝗁𝖺𝗇 𝖼𝗅𝗂𝖼𝗄 𝖻𝖾𝗅𝗈𝗐 𝖻𝗎𝗍𝗍𝗈𝗇..</b>",reply_markup=InlineKeyboardMarkup(btn))
             return
         except:
             pass
         return await message.reply('No such file exist.')
     files = files_[0]
-    title = '[ @WOMBACKUP ]   ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    title = '**🗣 @SwiftHornCinema**   ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
