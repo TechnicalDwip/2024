@@ -26,7 +26,7 @@ async def start(client, message):
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('☘️ Movies CH ☘️', url="https://t.me/+2xRD3nu8Y7ZkNTVl"),
-                    InlineKeyboardButton('🍁 Movies Grup 🍁', url='https://t.me/Womrequest')
+                    InlineKeyboardButton('🍁 Movies Grup 🍁', url='https://t.me/SwiftHornRequest')
                 ],[
                     InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url='https://t.me/Wombackup')
                   ]]
@@ -46,7 +46,7 @@ async def start(client, message):
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ ? 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('🍁 Mᴏᴠɪᴇ Gʀᴏᴜᴘ 🍁', url='https://t.me/Womrequest')
+                    InlineKeyboardButton('🍁 Mᴏᴠɪᴇ Gʀᴏᴜᴘ 🍁', url='https://t.me/SwiftHornRequest')
                 ],[
                     InlineKeyboardButton('☘️ Hᴇʟᴘ ☘️', callback_data='help'),
                     InlineKeyboardButton('🍃 Aʙᴏᴜᴛ 🍃', callback_data='about')
@@ -97,7 +97,7 @@ async def start(client, message):
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('☘️ Movies CH ☘️', url="https://t.me/+2xRD3nu8Y7ZkNTVl"),
-                    InlineKeyboardButton('🍁 Movies Grup 🍁', url='https://t.me/Womrequest')
+                    InlineKeyboardButton('🍁 Movies Grup 🍁', url='https://t.me/SwiftHornRequest')
                 ],[
                     InlineKeyboardButton('🌿 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🌿', url='https://t.me/Wombackup')
                   ]]
