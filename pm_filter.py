@@ -50,6 +50,20 @@ BUTTONS1 = {}
 BUTTONS2 = {}
 SPELL_CHECK = {}
 ENABLE_SHORTLINK = ""
+import datetime
+
+current_time = datetime.datetime.utcnow() + datetime.timedelta(hours=5, minutes=30)
+current_hour = current_time.hour
+
+if 4 <= current_hour < 12:
+    wish = "Gᴏᴏᴅ Mᴏʀɴɪɴɢ"
+elif 12 <= current_hour < 15:
+    wish = "Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ"
+elif 15 <= current_hour < 20:
+    wish = "Gᴏᴏᴅ Eᴠᴇɴɪɴɢ"
+else:
+    wish = "Gᴏᴏᴅ Nɪɢʜᴛ"
+
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -104,20 +118,21 @@ async def pm_text(bot, message):
         return  
     await message.reply_text(
         text=f"<b>{wish} {message.from_user.mention} Jɪ 😍 ,\n\nɪ ᴄᴀɴᴛ ɢɪᴠᴇ ᴍᴏᴠɪᴇ ʜᴇʀᴇ\nʏᴏᴜ ᴄᴀɴ ʀᴇǫᴜᴇsᴛ <a href={GRP_LNK}>ʜᴇʀᴇ</a> ᴏʀ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ ᴜsᴇ ᴍᴇ</b>",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ 😊", url=GRP_LNK
-                    )
-                ]
-            ]
-        ),
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("⤪ Rᴇǫᴜᴇsᴛ Mᴏᴠɪᴇ Hᴇʀᴇ ⤨", url=GRP_LNK)],
+            [InlineKeyboardButton("⤪ Cʜᴀɴɴᴇʟ ⤨", url=CHNL_LNK), InlineKeyboardButton("⤪ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⤨", user_id=int(1782834874))],
+            [InlineKeyboardButton("⤪ Cʟᴏsᴇ ⤨", callback_data="close_data")]
+        ])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
         text=f"<b>#𝐏𝐌_𝐌𝐄𝐒𝐒𝐀𝐆𝐄\n\nNᴀᴍᴇ : {user}\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}\n\n</b>",
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("Close 🔐", callback_data="close_data")]
+        ])
     )
+
+
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
@@ -238,7 +253,7 @@ async def next_page(bot, query):
                 btn.append(
                     [
                         InlineKeyboardButton("⬅️", callback_data=f"next_{req}_{key}_{off_set}"),
-                        InlineKeyboardButton(f"♻️{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
+                        InlineKeyboardButton(f"♻️ {math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
                         InlineKeyboardButton("➡️", callback_data=f"next_{req}_{key}_{n_offset}")
                     ],
                 )
@@ -259,7 +274,7 @@ async def next_page(bot, query):
                 btn.append(
                     [
                         InlineKeyboardButton("⬅️", callback_data=f"next_{req}_{key}_{off_set}"),
-                        InlineKeyboardButton(f"♻️{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"),
+                        InlineKeyboardButton(f"♻️ {math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"),
                         InlineKeyboardButton("➡️", callback_data=f"next_{req}_{key}_{n_offset}")
                     ],
                 )
@@ -281,7 +296,7 @@ async def next_page(bot, query):
             btn.append(
                 [
                     InlineKeyboardButton("⬅️", callback_data=f"next_{req}_{key}_{off_set}"),
-                    InlineKeyboardButton(f"♻️{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
+                    InlineKeyboardButton(f"♻️ {math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
                     InlineKeyboardButton("➡️", callback_data=f"next_{req}_{key}_{n_offset}")
                 ],
             )
@@ -1858,7 +1873,207 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sinfo":
         await query.answer(text=script.SINFO, show_alert=True)
 
-   #helljshsbsbsb
+    elif query.data == "start":
+        buttons = [[
+            InlineKeyboardButton('❗Dɪsᴄʟᴀɪᴍᴇʀ❗', callback_data='disclaimer')
+        ],[
+            InlineKeyboardButton('🔹Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ🔹', url=CHNL_LNK),
+            InlineKeyboardButton('🔹 Mᴏᴠɪᴇ Gʀᴏᴜᴘ 🔹', url=GRP_LNK)
+        ],[
+            InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💸', callback_data='earn'),
+            InlineKeyboardButton('📚 Aʙᴏᴜᴛ 📚', callback_data='about')
+        ],[
+            InlineKeyboardButton('🔻 Dᴏɴᴀᴛᴇ Us Fᴏʀ Sᴜʀᴠɪᴠᴇ 🔺', callback_data='donate')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ◌"
+        )
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id,
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "about":
+        buttons = [[
+            InlineKeyboardButton('⬅️', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ●"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.ABOUT_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "disclaimer":
+        buttons = [[
+            InlineKeyboardButton('⬅️', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ●"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.DISCLAIMER_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "earn":
+        buttons = [
+            [
+                InlineKeyboardButton('‼️ Vɪᴇᴡ Aʟʟ Cᴏᴍᴍᴀɴᴅs 🥶', callback_data='viewall')
+            ],
+            [
+                InlineKeyboardButton('⬅️', callback_data='start')
+            ]
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ●"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.EARN_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "viewall":
+        buttons = [[
+            InlineKeyboardButton('⬅️', callback_data='earn')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ●"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.VIEW_ALL_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "donate":
+        buttons = [
+            [
+                InlineKeyboardButton('Sᴇɴᴅ DᴏɴᴀᴛɪᴏN SᴄʀᴇᴇɴSʜᴏᴛ 📷', user_id=int(1782834874))
+            ],
+            [
+                InlineKeyboardButton('⬅️', callback_data='start')
+            ]
+        ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="● ◌ ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ◌ ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ◌ ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ◌"
+        )
+        await query.message.edit_text(
+            text="● ● ● ● ●"
+        )
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(DONATE))
+        )
+        await query.message.edit_text(
+            text=script.DNT_TXT,
+            reply_markup=reply_markup,
+        )
     elif data.startswith("generate_stream_link"):
         _, file_id = data.split(":")
         try:
